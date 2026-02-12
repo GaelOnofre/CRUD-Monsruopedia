@@ -1,4 +1,3 @@
-// src/routes/monsterRoutes.js
 const express = require('express');
 const router = express.Router();
 const monsterController = require('../controllers/MonsterController');
