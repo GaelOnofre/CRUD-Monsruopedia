@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gremio de Cazadores</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Un toque visual estilo Monster Hunter */
+        body { background-color: #f4eee1; color: #4a3b2a; }
+        .card-header { background-color: #5d4037 !important; color: #d4c4a8 !important; }
+        .btn-success { background-color: #558b2f; border-color: #558b2f; }
+    </style>
+</head>
+<body>
+
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Monstruopedia</h1>
+
+    <div class="card mb-4 shadow-sm">
+        <div class="card-header">
+            <h5 class="mb-0">Registrar Avistamiento</h5>
+        </div>
+        <div class="card-body">
+            <input type="hidden" id="monsterId">
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <input type="text" id="nombre" class="form-control" placeholder="Nombre (ej. Rathalos)" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="clase" class="form-control" placeholder="Clase (ej. Wyvern)" required>
+                </div>
+                <div class="col-md-3">
+                    <input type="text" id="debilidad" class="form-control" placeholder="Debilidad (ej. Trueno)" required>
+                </div>
+                <div class="col-md-2">
+                    <input type="number" id="amenaza" class="form-control" placeholder="Amenaza (1-10)" required>
+                </div>
+                <div class="col-md-1">
+                    <button class="btn btn-success w-100" onclick="guardarMonstruo()">💾</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="card shadow-sm">
+        <div class="card-body">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Monstruo</th>
+                        <th>Clase</th>
+                        <th>Debilidad Elemental</th>
+                        <th>Nivel Amenaza</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="tablaMonstruos">
+                    </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
