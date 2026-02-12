@@ -1,4 +1,3 @@
-// src/models/MonsterModel.js
 const mongoose = require('mongoose');
 
 const MonsterSchema = new mongoose.Schema({
@@ -7,15 +6,15 @@ const MonsterSchema = new mongoose.Schema({
         required: true
     },
     clase: {
-        type: String, // Ej: Wyvern Pájaro, Bestia de Colmillos
+        type: String,
         required: true
     },
     debilidad: {
-        type: String, // Ej: Fuego, Agua, Hielo
+        type: String,
         required: true
     },
     amenaza: {
-        type: Number, // Nivel de estrellas (1-10)
+        type: Number,
         required: true
     }
 });
