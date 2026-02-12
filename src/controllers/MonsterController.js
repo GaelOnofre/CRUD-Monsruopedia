@@ -1,7 +1,5 @@
-// src/controllers/monsterController.js
 const Monster = require('../models/MonsterModel');
 
-// CREAR Monstruo
 exports.createMonster = async (req, res) => {
     try {
         const nuevoMonstruo = new Monster(req.body);
@@ -12,7 +10,6 @@ exports.createMonster = async (req, res) => {
     }
 };
 
-// LEER Monstruos
 exports.getMonsters = async (req, res) => {
     try {
         const monstruos = await Monster.find();
@@ -22,7 +19,6 @@ exports.getMonsters = async (req, res) => {
     }
 };
 
-// ACTUALIZAR Monstruo
 exports.updateMonster = async (req, res) => {
     try {
         const { id } = req.params;
@@ -33,7 +29,6 @@ exports.updateMonster = async (req, res) => {
     }
 };
 
-// ELIMINAR Monstruo
 exports.deleteMonster = async (req, res) => {
     try {
         const { id } = req.params;
