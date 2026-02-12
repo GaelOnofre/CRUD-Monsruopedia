@@ -1,9 +1,7 @@
-// public/script.js
 const API_URL = 'http://localhost:3000/api/monsters';
 
 document.addEventListener('DOMContentLoaded', cargarMonstruos);
 
-// LEER
 async function cargarMonstruos() {
     const respuesta = await fetch(API_URL);
     const monstruos = await respuesta.json();
@@ -26,8 +24,7 @@ async function cargarMonstruos() {
         `;
     });
 }
-
-// CREAR / EDITAR
+ 
 async function guardarMonstruo() {
     const id = document.getElementById('monsterId').value;
     const datos = {
